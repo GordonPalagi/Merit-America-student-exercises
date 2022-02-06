@@ -84,7 +84,7 @@ Errors: 22
 Following the below steps, type the appropriate Unix commands in the first window to build a directory structure. If you want to check your progress, re-run `verify-part-1.sh` in the second window.
 
 1. Starting from your home directory, create a new directory called `playground`.
-2. Create a new directory at the path `~/playground/usa`.
+2. Create a new directory at the path `~/playground/usa`. 
 3. Create a new directory at the path `~/playground/canada`.
 4. Create a new directory at the path `~/playground/usa/ohio`.
 5. Create a new directory at the path `~/playground/usa/pennsylvania`.
