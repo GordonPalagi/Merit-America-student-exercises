@@ -14,7 +14,7 @@ public class DecimalToBinary {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Please enter in a series of decimal values (separated by spaces): ");
+		System.out.print("Enter in a series of decimal values (separated by spaces): ");
 
 
 		String nums = sc.nextLine();
