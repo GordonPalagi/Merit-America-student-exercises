@@ -11,7 +11,7 @@ public class Fibonacci {
 		int num2 = 1;
 		int num3 = 1;
 
-		System.out.print("Please enter a number: ");
+		System.out.print("Enter a number: ");
 		int fibTarget = sc.nextInt();
 
 		System.out.print(num1 + " ");
