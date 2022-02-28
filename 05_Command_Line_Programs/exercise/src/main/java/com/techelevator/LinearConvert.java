@@ -9,7 +9,7 @@ public class LinearConvert {
 		Scanner sc = new Scanner(System.in);
 		double meters;
 		double feet;
-		System.out.print("Please enter the length: ");
+		System.out.print("Enter the length: ");
 		double length = sc.nextDouble();
 		System.out.print("Is the measurement in (m)eter, or (f)eet? ");
 		String measurementType = sc.next();

@@ -8,7 +8,7 @@ public class TempConvert {
 		Scanner sc = new Scanner(System.in);
 		double convertToFahrenheit;
 		double convertToCelcius;
-		System.out.print("Please enter the temperature: ");
+		System.out.print("Enter the temperature: ");
 		int temperature = sc.nextInt();
 		System.out.print("Is the temperature in (C)elsius, or (F)ahrenheit? ");
 		String tempType = sc.next();
