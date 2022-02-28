@@ -1,7 +1,5 @@
 package com.techelevator;
 
-import java.util.Locale;
-
 public class Exercises {
 
 	/*
