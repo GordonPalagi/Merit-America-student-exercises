@@ -1,6 +1,6 @@
 package com.techelevator;
 
-public class SavingsAccount extends BankAccount {
+public class SavingsAccount extends BankAccount implements Accountable {
 
     public SavingsAccount(String accountHolder, String accountNumber, int balance) {
         super(accountHolder, accountNumber, balance);
@@ -22,4 +22,28 @@ public class SavingsAccount extends BankAccount {
         }
         return getBalance();
     }
+
+    @Override
+    public int transferTo(BankAccount destinationAccount, int transferAmount) {
+        int serviceFee = 2;
+        int newBalance = getBalance() - transferAmount;
+        int withdrawLimit = 150;
+        boolean withdrawNull = newBalance < 0;
+
+
+        if (newBalance > withdrawLimit) {
+            super.withdraw(transferAmount);
+            destinationAccount.deposit(transferAmount);
+
+        } else if (newBalance < withdrawLimit && !withdrawNull) {
+            super.withdraw(transferAmount + serviceFee);
+            destinationAccount.deposit(transferAmount);
+            return newBalance - serviceFee;
+
+        } else if (withdrawNull) {
+            return getBalance();
+        }
+        return newBalance;
+    }
 }
+

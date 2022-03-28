@@ -1,9 +1,9 @@
 package com.techelevator;
 
-public class BankAccount {
+public class BankAccount implements Accountable {
 
-    private String accountHolderName;
-    private String accountNumber;
+    private final String accountHolderName;
+    private final String accountNumber;
     private int balance;
 
     public BankAccount(String accountHolder, String accountNumber) {
@@ -30,6 +30,11 @@ public class BankAccount {
         return balance;
     }
 
+    @Override
+    public boolean isVip() {
+        return false;
+    }
+
     public int deposit(int amountToDeposit) {
         balance = balance + amountToDeposit;
         return balance;
@@ -40,4 +45,9 @@ public class BankAccount {
         return balance;
     }
 
+    public int transferTo(BankAccount destinationAccount, int transferAmount) {
+        this.withdraw(transferAmount);
+        destinationAccount.deposit(transferAmount);
+        return balance;
+    }
 }
